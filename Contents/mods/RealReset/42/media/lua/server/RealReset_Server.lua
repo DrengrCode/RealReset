@@ -1,4 +1,4 @@
--- RealReset! server side (v0.4.0)
+-- RealReset! server side (v0.4.2)
 -- Reads Admin Zone Reset's synced zone file, then moves the save file of every chunk in
 -- the RESET zones to a trash folder (Java side) so it regenerates from the base map.
 --

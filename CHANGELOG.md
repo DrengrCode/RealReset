@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.4.2
+- The jar is back at `media/java/RealReset.jar`. In 0.4.1 it was under `media/java/server/`, and ZombieBuddy on a dedicated server skipped it as a "server-only mod", so the Java side never loaded. Players still do not need ZombieBuddy (no `require=` in mod.info); a player who has ZombieBuddy installed gets its normal one-time approval prompt for the jar.
+
+## 0.4.1
+- Players no longer need ZombieBuddy: removed `require=\ZombieBuddy` from mod.info and moved the jar to `media/java/server/` (ZombieBuddy skips that folder on game clients, so players are not asked to approve a Java mod and do not see "ZombieBuddy is not installed"). The server still needs the ZombieBuddy agent.
+
 ## 0.4.0
 - RESET is now a queue. RESET NOW starts it and it works through the chunks in steps of up to 200 chunks per second, pausing by itself when the safety limit (3000 moves / 10 min, was 1000) is used up and carrying on when it frees. No more PLAN + RESET every 200 chunks (one queue holds up to 3000). Every step re-reads safehouses, protected zones and claims, so one made mid-run is respected. The button becomes CANCEL QUEUE while it runs; progress is sent every 20 s; the whole queue is one batch for RESTORE. It pauses if the starting admin goes offline. Chunks skipped for a nearby player or a loaded chunk are not retried; PLAN again later.
 - RESTORE is a queue too: same steps, same pause at the safety limit, same CANCEL QUEUE button; no more 200-chunk rounds. The queue also only takes chunks that have a saved file, so never-saved chunks no longer use up the 3000 slots.

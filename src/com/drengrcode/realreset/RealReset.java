@@ -36,7 +36,7 @@ public final class RealReset {
 
     private RealReset() {}
 
-    public static final String VERSION = "0.4.0";
+    public static final String VERSION = "0.4.2";
 
     // ---- result codes (returned to Lua) -------------------------------------------
     public static final int MOVED        =  1; // (preview: would be moved)

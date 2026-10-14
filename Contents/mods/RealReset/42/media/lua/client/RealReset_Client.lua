@@ -1,4 +1,4 @@
--- RealReset! client side (v0.4.0): a small admin panel, plus the player zone notice.
+-- RealReset! client side (v0.4.2): a small admin panel, plus the player zone notice.
 -- All real checks happen on the server.
 -- Open it: right-click the ground in the world as an admin -> "RealReset! (chunk reset)".
 -- RESET mode: pick a zone group, PLAN, RESET NOW.

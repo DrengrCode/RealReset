@@ -6,7 +6,7 @@ RealReset! reads the RESET zones you drew with [Admin Zone Reset](https://steamc
 and, one chunk at a time, moves each chunk's save file into a trash folder. The next time that chunk loads, the game
 rebuilds it from the base map. Safehouses and your PROTECTED zones are skipped.
 
-**Status: beta (0.4.0).** Tested in game on B42.21 with a dedicated test server (resets and restores of 600+ chunks,
+**Status: beta (0.4.2).** Tested in game on B42.21 with a dedicated test server (resets and restores of 600+ chunks,
 claimed-vehicle protection, settings, warning notice). Not yet proven on a busy live server, and the two-admin lock is only
 tested in mocks. **Back up `Saves/Multiplayer/<server>/map` and `vehicles.db` before your first real run**, and start with one small group.
 
@@ -14,12 +14,12 @@ tested in mocks. **Back up `Saves/Multiplayer/<server>/map` and `vehicles.db` be
 - A dedicated server where **you can add a Java agent** ([ZombieBuddy](https://github.com/zed-0xff/ZombieBuddy)). Ask your host.
 - Admin Zone Reset on the same server (RealReset! reads its synced zones file `AdminZoneReset_ServerZones.txt`).
 - You are a server **admin** (access level `admin`). Everything is re-checked on the server.
-- Every player who joins needs the mod too (a PZ rule for anything in `Mods=`). Publish it on the Workshop so it downloads automatically. It does nothing on a player's PC.
+- Every player who joins needs the mod too (a PZ rule for anything in `Mods=`). Publish it on the Workshop so it downloads automatically. It does nothing on a player's PC. Players do **not** need ZombieBuddy (the mod does not require it). A player who already has ZombieBuddy installed will be asked once to approve the RealReset jar; they can say no, since it only does anything on the server. Do **not** add the ZombieBuddy mod to a server's `Mods=` just for RealReset!: it makes every player see a "ZombieBuddy is not installed" message. The agent on the server is what counts.
 
 ## Install
-1. Unpack `RealReset_v0.4.0.zip` so the folder `RealReset` sits in the server's mods folder (and on your own PC to use the panel).
+1. Unpack `RealReset_v0.4.2.zip` so the folder `RealReset` sits in the server's mods folder (and on your own PC to use the panel).
 2. Add `RealReset` to `Mods=`.
-3. Make sure ZombieBuddy is loaded on the server. The log should show `[RealReset] RealReset 0.4.0 | ... | READY`.
+3. Make sure ZombieBuddy is loaded on the server. The log should show `[RealReset] RealReset 0.4.2 | ... | READY`.
 
 ## First run on a live server
 1. Stop the server. Back up `Saves/Multiplayer/<server>/map/` and `vehicles.db`.

@@ -3,7 +3,7 @@
 set -euo pipefail
 cd "$(dirname "$0")"
 VER=$(grep -o 'VERSION = "[^"]*"' src/com/drengrcode/realreset/RealReset.java | cut -d'"' -f2)
-rm -rf build && mkdir -p build/stubcls build/classes
+rm -rf build Contents/mods/RealReset/42/media/java && mkdir -p build/stubcls build/classes Contents/mods/RealReset/42/media/java
 javac -d build/stubcls stubs/se/krka/kahlua/integration/annotations/LuaMethod.java
 javac --release 17 -Xlint:all -cp build/stubcls -d build/classes src/com/drengrcode/realreset/RealReset.java
 # the jar contains ONLY our classes (the annotation stub is compile-time only)

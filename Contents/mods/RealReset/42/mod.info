@@ -1,7 +1,6 @@
 name=RealReset!
 id=RealReset
-description=Admin tool: regenerate chunks inside Admin Zone Reset RESET zones while the server runs. Needs ZombieBuddy on the server. Moves chunk files to a trash folder, never hard-deletes. Open source (MIT).
+description=Admin tool: regenerate chunks inside Admin Zone Reset RESET zones while the server runs. Needs ZombieBuddy on the server (players do not need it). Moves chunk files to a trash folder, never hard-deletes. Open source (MIT).
 author=HoofHearted
-require=\ZombieBuddy
 javaJarFile=media/java/RealReset.jar
 javaPkgName=com.drengrcode.realreset
